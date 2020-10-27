@@ -1,0 +1,24 @@
+@import 'default'
+@import 'blocks/header'
+@import 'media'
+
+
+
+
+.summary-list
+  +row-flex()
+  &__item
+    position: relative
+    +col()
+    +size(6)
+    padding-left: 20px
+    &::before
+      position: absolute
+      content: ''
+      top: 50%
+      transform: translateY(-50%)
+      left: 0
+      background: $accent-lighter
+      width: 15px
+      height: 15px
+      border-radius: 50%
