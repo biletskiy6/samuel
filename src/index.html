@@ -21,21 +21,36 @@
 
 
 <!-- Adaptive header without media query -->
+
+<div class="bubbles-wrapper">
+    <div class="bubble x1"></div>
+    <div class="bubble x2"></div>
+    <div class="bubble x3"></div>
+    <div class="bubble x4"></div>
+    <div class="bubble x5"></div>
+    <div class="bubble x6"></div>
+    <div class="bubble x7"></div>
+    <div class="bubble x8"></div>
+    <div class="bubble x9"></div>
+    <div class="bubble x10"></div>
+</div>
+
 <header class="header">
     <div class="top-line">
         <div class="row">
             <div class="logo">
-                <img class="logo__image"
-                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAnCAYAAABNJBuZAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wcEDCgVK2T8OAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABCUlEQVRYw+2ZMQrCQBBFX6IIASGCB7DQAwiCkCOIYGVr64W8gbZiqyCmkhRWnsEDiOIBtBKWIUHRRN11BlLMDCQ8mL/zl3jNZgsXwseRyAMkAa7Gs7QRJAQiUYt0tBREQX4vygW/fwx0jHwLzIr4kPfmQgyBk6idgRoQABegZPSOQN220aoICFJy1YiC/PupVUR0gbaR74C9bSAVYANUjdoBaNg2WoGAuK+Ar2pkKuz/xEaxh8BI1EYuin0A9I18DqzzAEnEhWkF9ArUwUK4gOEja+M/OQafvAW+ZG10syuIgiiIgihIXhYl1efbBpLp820brUyfrxpREAVxC+QMxKIX29TzXPmrewMgOjArLLytFAAAAABJRU5ErkJggg==">
-                <div class="logo__title">Motion</div>
-                <div class="logo__subtitle">Funny Page Templates</div>
+                <img src="./static/img/logo.jpg" class="logo__image"/>
             </div>
             <div class="menu">
-                <button class="mobile-menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                <button class="mobile-menu"
+                        onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+                        aria-label="Main Menu">
                     <svg width="100" height="100" viewBox="0 0 100 100">
-                        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                        <path class="line line2" d="M 20,50 H 80" />
-                        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                        <path class="line line1"
+                              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"/>
+                        <path class="line line2" d="M 20,50 H 80"/>
+                        <path class="line line3"
+                              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"/>
                     </svg>
                 </button>
                 <div class="menuRow">
@@ -49,8 +64,13 @@
             </div>
         </div>
     </div>
-    <div class="middle-line">middle line</div>
-    <div class="bottom-line">
+    <div class="middle-line">
+        <h1 class="rellax" data-rellax-speed="1">Data & Voice</h1>
+        <img class="rellax" data-rellax-speed="-1"
+             src="https://images.unsplash.com/photo-1603807793695-7bfd7de97d1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+             alt="">
+    </div>
+    <div class="bottom-line rellax">
         <a href="tel:02036333182" class="phone">020 3633 3182</a>
         <ul class="socials">
             <li>F</li>
@@ -60,28 +80,29 @@
 </header>
 
 <section class="section section--accent">
-  <h2 class="main-title">Microsoft Teams</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita maxime nihil nobis nulla officia quos repellendus, sit ullam voluptatibus.</p>
-  <button class="main-button">Request a call back</button>
+    <h2 class="main-title">Microsoft Teams</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita maxime nihil nobis nulla officia
+        quos repellendus, sit ullam voluptatibus.</p>
+    <button class="main-button">Request a call back</button>
 
 
-  <form class="form" action="#">
-    <div class="form-field">
-      <label for="name">Name</label>
-      <input class="form-field" type="text" id="name">
-    </div>
-    <input class="form-submit main-button main-button--dark" type="submit" value="Send">
-  </form>
+    <form class="form" action="#">
+        <div class="form-field">
+            <label for="name">Name</label>
+            <input class="form-field" type="text" id="name">
+        </div>
+        <input class="form-submit main-button main-button--dark" type="submit" value="Send">
+    </form>
 </section>
 
 <section class="section summary">
-  <h3 class="secondary-title">Section summary</h3>
-  <ul class="summary-list">
-    <li class="summary-list__item">Lorem ipsum dolor sit amet.</li>
-    <li class="summary-list__item">Lorem ipsum dolor sit amet.</li>
-    <li class="summary-list__item">Lorem ipsum dolor sit amet.</li>
-    <li class="summary-list__item">Lorem ipsum dolor sit amet.</li>
-  </ul>
+    <h3 class="secondary-title">Section summary</h3>
+    <ul class="summary-list">
+        <li class="summary-list__item">Lorem ipsum dolor sit amet.</li>
+        <li class="summary-list__item">Lorem ipsum dolor sit amet.</li>
+        <li class="summary-list__item">Lorem ipsum dolor sit amet.</li>
+        <li class="summary-list__item">Lorem ipsum dolor sit amet.</li>
+    </ul>
 </section>
 
 
@@ -104,10 +125,14 @@
         <p>All Rights Reserved</p>
         <ul class="socials">
             <li>
-                <a href="#">F</a>
+                <a href="#">
+                    <span>f</span>
+                </a>
             </li>
             <li>
-                <a href="#">T</a>
+                <a href="#">
+                    <span>t</span>
+                </a>
             </li>
         </ul>
     </div>
@@ -115,6 +140,7 @@
 <!-- Adaptive header without media query -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
 <script src="static/js/libs.min.js"></script>
 <script src="static/js/scripts.min.js"></script>
 </body>

@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52d249b2-72f0-49be-a5d6-07ab3ed3ca2c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartgrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/smartgrid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/static/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/js/scripts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/static/sass/_default.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/sass/_default.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/sass/_vars.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/sass/_vars.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/static/sass/blocks/_header.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/sass/blocks/_header.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/sass/main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/sass/main.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/sass/smart-grid.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/sass/smart-grid.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,11 +46,19 @@
       <option name="presentableId" value="Default" />
       <updated>1603787112680</updated>
       <workItem from="1603787113725" duration="1932000" />
-      <workItem from="1603791830482" duration="8915000" />
+      <workItem from="1603791830482" duration="10039000" />
+      <workItem from="1603874601389" duration="112000" />
+      <workItem from="1603883983250" duration="6919000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2696" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1603874711796">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2696" y="310" width="424" height="484" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1603874711796" />
   </component>
 </project>
