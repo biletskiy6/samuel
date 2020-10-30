@@ -1,18 +1,14 @@
 $columns: 12
 $atom: (100% / $columns)
 
-$break_lg: 1920px
-$break_desktop: 1440px
 $break_md: 1366px
 $break_mdx: 1280px
-$break_tablet: 1024px
+$break_tablet: 992px
 $break_tabletx: 768px
 $break_phone: 480px
 $break_iphone: 320px
 
 $offset: 30px
-$offset_lg: $offset
-$offset_desktop: $offset
 $offset_md: $offset
 $offset_mdx: $offset
 $offset_tablet: $offset
@@ -21,8 +17,6 @@ $offset_phone: $offset
 $offset_iphone: $offset
 
 $offset_one_side: ($offset / 2)
-$offset_lg_one_side: ($offset_lg / 2)
-$offset_desktop_one_side: ($offset_desktop / 2)
 $offset_md_one_side: ($offset_md / 2)
 $offset_mdx_one_side: ($offset_mdx / 2)
 $offset_tablet_one_side: ($offset_tablet / 2)
@@ -31,8 +25,6 @@ $offset_phone_one_side: ($offset_phone / 2)
 $offset_iphone_one_side: ($offset_iphone / 2)
 
 $fields: 20px
-$fields_lg: 20px
-$fields_desktop: 15px
 $fields_md: 15px
 $fields_mdx: 15px
 $fields_tablet: 15px
@@ -43,14 +35,6 @@ $fields_iphone: 10px
 =wrapper-full()
     padding-left: $fields
     padding-right: $fields
-
-    +lg-block()
-        padding-left: $fields_lg
-        padding-right: $fields_lg
-
-    +desktop-block()
-        padding-left: $fields_desktop
-        padding-right: $fields_desktop
 
     +md-block()
         padding-left: $fields_md
@@ -121,14 +105,6 @@ $fields_iphone: 10px
     $val: 100% / $columns * $n
     width: #{calc(#{$val} - #{$offset})}
 
-=size-lg($n)
-    $val: 100% / $columns * $n
-    +lg(width, #{calc(#{$val} - #{$offset_lg})})
-
-=size-desktop($n)
-    $val: 100% / $columns * $n
-    +desktop(width, #{calc(#{$val} - #{$offset_desktop})})
-
 =size-md($n)
     $val: 100% / $columns * $n
     +md(width, #{calc(#{$val} - #{$offset_md})})
@@ -178,58 +154,6 @@ $fields_iphone: 10px
 =shift-padding-right($n)
     $val: 100% / $columns * $n
     padding-right: #{calc(#{$val} + #{$offset_one_side})}
-
-=shift-lg($n)
-    $val: 100% / $columns * $n
-    +lg(margin-left, #{calc(#{$val} + #{$offset_lg_one_side})})
-    +lg(margin-right, #{calc(#{$val} + #{$offset_lg_one_side})})
-
-=shift-lg-left($n)
-    $val: 100% / $columns * $n
-    +lg(margin-left, #{calc(#{$val} + #{$offset_lg_one_side})})
-
-=shift-lg-right($n)
-    $val: 100% / $columns * $n
-    +lg(margin-right, #{calc(#{$val} + #{$offset_lg_one_side})})
-
-=shift-lg-padding($n)
-    $val: 100% / $columns * $n
-    +lg(padding-left, #{calc(#{$val} + #{$offset_lg_one_side})})
-    +lg(padding-right, #{calc(#{$val} + #{$offset_lg_one_side})})
-
-=shift-lg-padding-left($n)
-    $val: 100% / $columns * $n
-    +lg(padding-left, #{calc(#{$val} + #{$offset_lg_one_side})})
-
-=shift-lg-padding-right($n)
-    $val: 100% / $columns * $n
-    +lg(padding-right, #{calc(#{$val} + #{$offset_lg_one_side})})
-
-=shift-desktop($n)
-    $val: 100% / $columns * $n
-    +desktop(margin-left, #{calc(#{$val} + #{$offset_desktop_one_side})})
-    +desktop(margin-right, #{calc(#{$val} + #{$offset_desktop_one_side})})
-
-=shift-desktop-left($n)
-    $val: 100% / $columns * $n
-    +desktop(margin-left, #{calc(#{$val} + #{$offset_desktop_one_side})})
-
-=shift-desktop-right($n)
-    $val: 100% / $columns * $n
-    +desktop(margin-right, #{calc(#{$val} + #{$offset_desktop_one_side})})
-
-=shift-desktop-padding($n)
-    $val: 100% / $columns * $n
-    +desktop(padding-left, #{calc(#{$val} + #{$offset_desktop_one_side})})
-    +desktop(padding-right, #{calc(#{$val} + #{$offset_desktop_one_side})})
-
-=shift-desktop-padding-left($n)
-    $val: 100% / $columns * $n
-    +desktop(padding-left, #{calc(#{$val} + #{$offset_desktop_one_side})})
-
-=shift-desktop-padding-right($n)
-    $val: 100% / $columns * $n
-    +desktop(padding-right, #{calc(#{$val} + #{$offset_desktop_one_side})})
 
 =shift-md($n)
     $val: 100% / $columns * $n
@@ -386,22 +310,6 @@ $fields_iphone: 10px
 =shift-iphone-padding-right($n)
     $val: 100% / $columns * $n
     +iphone(padding-right, #{calc(#{$val} + #{$offset_iphone_one_side})})
-
-=lg($name, $value)
-    @media screen and (max-width: $break_lg)
-        #{$name}: $value
-
-=lg-block()
-    @media screen and (max-width: $break_lg)
-        @content
-
-=desktop($name, $value)
-    @media screen and (max-width: $break_desktop)
-        #{$name}: $value
-
-=desktop-block()
-    @media screen and (max-width: $break_desktop)
-        @content
 
 =md($name, $value)
     @media screen and (max-width: $break_md)

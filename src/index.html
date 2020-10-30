@@ -1,148 +1,191 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>OptimizedHTML 4</title>
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:image" content="path/to/image.jpg">
-    <meta name="theme-color" content="#283645">
-    <meta name="msapplication-navbutton-color" content="#283645">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#283645">
-    <link rel="icon" href="static/img/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon/apple-touch-icon-180x180.png">
-    <base href="/">
-    <link rel="stylesheet" href="static/css/main.css">
-</head>
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta property="og:image" content="path/to/image.jpg" />
+    <meta name="theme-color" content="#283645" />
+    <meta name="msapplication-navbutton-color" content="#283645" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#283645" />
+    <link rel="icon" href="static/img/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="static/img/favicon/apple-touch-icon-180x180.png"
+    />
+    <base href="/" />
+    <link rel="stylesheet" href="static/css/main.css" />
+  </head>
+  <body class="home">
 
-<body class="home">
 
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <!-- Cursor -->
 
-<!-- Adaptive header without media query -->
-
-<div class="bubbles-wrapper">
-    <div class="bubble x1"></div>
-    <div class="bubble x2"></div>
-    <div class="bubble x3"></div>
-    <div class="bubble x4"></div>
-    <div class="bubble x5"></div>
-    <div class="bubble x6"></div>
-    <div class="bubble x7"></div>
-    <div class="bubble x8"></div>
-    <div class="bubble x9"></div>
-    <div class="bubble x10"></div>
-</div>
-
-<header class="header">
-    <div class="top-line">
-        <div class="row">
-            <div class="logo">
-                <img src="./static/img/logo.jpg" class="logo__image"/>
-            </div>
-            <div class="menu">
-                <button class="mobile-menu"
-                        onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
-                        aria-label="Main Menu">
-                    <svg width="100" height="100" viewBox="0 0 100 100">
-                        <path class="line line1"
-                              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"/>
-                        <path class="line line2" d="M 20,50 H 80"/>
-                        <path class="line line3"
-                              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"/>
-                    </svg>
-                </button>
-                <div class="menuRow">
-                    <a href="#" class="menuItem">Home</a>
-                    <a href="#" class="menuItem">Managed Services</a>
-                    <a href="#" class="menuItem">Security</a>
-                    <a href="#" class="menuItem">Data & Voice</a>
-                    <a href="#" class="menuItem">Professional Services</a>
-                    <a href="#" class="menuItem">Contact</a>
-                </div>
-            </div>
-        </div>
+    <!-- Loader -->
+    <div id="overlay-1">
+      <h1>Loading...</h1>
     </div>
-    <div class="middle-line">
+    <div id="overlay-2"></div>
+    <!-- Loader -->
+
+    <!-- Adaptive header without media query -->
+
+    <div class="bubbles-wrapper">
+      <div class="bubble x1"></div>
+      <div class="bubble x2"></div>
+      <div class="bubble x3"></div>
+      <div class="bubble x4"></div>
+      <div class="bubble x5"></div>
+      <div class="bubble x6"></div>
+      <div class="bubble x7"></div>
+      <div class="bubble x8"></div>
+      <div class="bubble x9"></div>
+      <div class="bubble x10"></div>
+    </div>
+    <header class="header-container">
+      <div class="top-line">
+      <div class="row">
+        <div class="logo">
+          <img src="./static/img/logo.jpg" class="logo__image" />
+        </div>
+        <div class="menu">
+          <button
+            class="mobile-menu"
+            aria-label="Main Menu"
+          >
+            <svg width="100" height="100" viewBox="0 0 100 100">
+              <path
+                class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+              />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path
+                class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+              />
+            </svg>
+          </button>
+          <ul class="menuRow">
+              <li><a href="#" class="menuItem">Home</a></li>
+              <li><a href="#" class="menuItem">Managed Services</a></li>
+              <li><a href="#" class="menuItem">Security</a></li>
+              <li><a href="#" class="menuItem">Data & Voice</a></li>
+              <li><a href="#" class="menuItem">Professional Services</a></li>
+              <li><a href="#" class="menuItem">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+      <div class="header">
+        <div class="middle-line">
         <h1 class="rellax" data-rellax-speed="1">Data & Voice</h1>
-        <img class="rellax" data-rellax-speed="-1"
-             src="https://images.unsplash.com/photo-1603807793695-7bfd7de97d1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
-             alt="">
-    </div>
-    <div class="bottom-line rellax">
+        <img
+          class="rellax"
+          data-rellax-speed="-1"
+          src="https://images.unsplash.com/photo-1603807793695-7bfd7de97d1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+          alt=""
+        />
+        </div>
+        <div class="bottom-line rellax">
         <a href="tel:02036333182" class="phone">020 3633 3182</a>
-        <ul class="socials">
-            <li>F</li>
-            <li>T</li>
-        </ul>
-    </div>
-</header>
+        <ul class="socials socials--default">
+            <li>
+              <a href="#" target="_blank">
+                <svg>
+                    <use xlink:href="/static/img/svg/sprite.svg#facebook" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <svg>
+                    <use xlink:href="/static/img/svg/sprite.svg#twitter" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
-<section class="section section--accent">
-    <h2 class="main-title">Microsoft Teams</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita maxime nihil nobis nulla officia
-        quos repellendus, sit ullam voluptatibus.</p>
-    <button class="main-button">Request a call back</button>
 
+    <section class="section section--accent">
+      <h2 class="main-title">Microsoft Teams</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+        expedita maxime nihil nobis nulla officia quos repellendus, sit ullam
+        voluptatibus.
+      </p>
+      <button class="main-button">Request a call back</button>
 
-    <form class="form" action="#">
+      <form class="form" action="#">
         <div class="form-field">
-            <label for="name">Name</label>
-            <input class="form-field" type="text" id="name">
+          <label for="name">Name</label>
+          <input class="form-field" type="text" id="name" />
         </div>
-        <input class="form-submit main-button main-button--dark" type="submit" value="Send">
-    </form>
-</section>
+        <input
+          class="form-submit main-button main-button--dark"
+          type="submit"
+          value="Send"
+        />
+      </form>
+    </section>
 
-<section class="section summary">
-    <h3 class="secondary-title">Section summary</h3>
-    <ul class="summary-list">
+    <section class="section summary">
+      <h3 class="secondary-title">Section summary</h3>
+      <ul class="summary-list">
         <li class="summary-list__item">Lorem ipsum dolor sit amet.</li>
         <li class="summary-list__item">Lorem ipsum dolor sit amet.</li>
         <li class="summary-list__item">Lorem ipsum dolor sit amet.</li>
         <li class="summary-list__item">Lorem ipsum dolor sit amet.</li>
-    </ul>
-</section>
+      </ul>
+    </section>
 
-
-<footer class="footer">
-    <div class="footer-navigation">
+    <footer class="footer">
+      <div class="footer-navigation">
         <div class="container">
-            <div class="footer-navigation-wrapper">
-                <div class="footer-item">
-                    <h4>Managed Services</h4>
-                    <ul>
-                        <li>It Support</li>
-                        <li>Netrowk</li>
-                        <li>Cloud</li>
-                    </ul>
-                </div>
+          <div class="footer-navigation-wrapper">
+            <div class="footer-item">
+              <h4>Managed Services</h4>
+              <ul>
+                <li>It Support</li>
+                <li>Netrowk</li>
+                <li>Cloud</li>
+              </ul>
             </div>
+          </div>
         </div>
-    </div>
-    <div class="footer-copyrights">
+      </div>
+      <div class="footer-copyrights">
         <p>All Rights Reserved</p>
         <ul class="socials">
-            <li>
-                <a href="#">
-                    <span>f</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span>t</span>
-                </a>
-            </li>
+          <li>
+            <a href="#">
+              <span>f</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>t</span>
+            </a>
+          </li>
         </ul>
-    </div>
-</footer>
-<!-- Adaptive header without media query -->
+      </div>
+    </footer>
+    <!-- Adaptive header without media query -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
-<script src="static/js/libs.min.js"></script>
-<script src="static/js/scripts.min.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+    <script src="static/js/libs.min.js"></script>
+    <script src="static/js/scripts.min.js"></script>
+  </body>
 </html>

@@ -27,19 +27,72 @@ body.home
 	line-height: 1.65
 	font-family: $default-font
 	overflow-x: hidden
-	padding-top: 100vh
+	// padding-top: 100vh
 
+ul
+	list-style-type: none
+	margin: 0
+	padding: 0
 .container
 	+wrapper()
 
 +reset()
+
+
+
+.cursor, .cursor2
+	position: fixed
+	display: none
+	top: 0
+	left: 0
+	pointer-events: none
+	border-radius: 50%
+	z-index: 999
+	transfrom: translate(-50%, -50%)
+.cursor
+	border: 1px solid #c6c6c6
+	width: 50px
+	height: 50px
+	transition: .1s
+.cursor2
+	width: 8px
+	height: 8px
+	background-color: #c6c6c6
+	transition: .15s
+
+#overlay-1
+	width: 100%
+	height: 100%
+	background-color: #1b1b1b
+	overflow: hidden
+	position: fixed
+	top: 0
+	color: #fff
+	z-index: 1002
+	display: flex
+	justify-content: center
+	align-items: center
+	transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1)
+	h1
+		font-size: 58px
+		font-weight: 600
+#overlay-2
+	z-index: 1001
+	top: 0
+	left: 0
+	position: fixed
+	width: 100%
+	height: 100vh
+	background: #E9D076
+#overlay-1, #overlay-2
+	display: none
 .bubbles-wrapper
 	position: absolute
 	left: 0
 	top: 0
 	width: 100%
 	height: 100%
-	z-index: 9999
+	z-index: 1000
 	overflow: hidden
 	pointer-events: none
 	.bubble
@@ -110,7 +163,6 @@ body.home
 	100%
 		margin-left: 25px
 
-
 .mobile-menu
 	background-color: transparent
 	border: none
@@ -144,15 +196,17 @@ body.home
 		.line3
 			stroke-dasharray: 90 207
 			stroke-dashoffset: -134
-
-
-
-
+	+tablet-block()
+		position: relative
+		z-index: 101
+		display: flex
+		margin-left: auto
 
 .main-title
 	color: #fff
 	font-size: 72px
 	font-weight: 700
+	margin: 0
 	&--inverse
 		color: $accent
 
@@ -191,22 +245,42 @@ body.home
 	background: #fff
 	&--accent
 		background: $accent
+		p
+			color: #fff
 .phone
 	display: inline-flex
 	position: relative
 	text-decoration: none
 	align-self: flex-start
 	color: $accent-lighter
-	padding-left: 15px
+	padding-left: 30px
+	font-weight: 700
 	&::before
 		position: absolute
 		content: ''
 		top: 50%
 		transform: translateY(-50%)
 		left: 0
-		width: 2px
-		height: 120%
+		width: 5px
+		height: 150%
 		background: $dark
+		transition: height .35s ease
+	&::after
+		position: absolute
+		content: ''
+		width: 0%
+		height: 2px
+		background: $accent
+		bottom: 0
+		right: 0
+		transition: all .25s ease
+	&:hover
+		&::before
+			height: 120%
+			transition: height .35s ease
+		&::after
+			 width: calc(100% - 30px)
+             transition: all .25s ease
 .form
 	display: flex
 	flex-direction: column
@@ -244,12 +318,12 @@ body.home
 		display: inline-flex
 		justify-content: center
 		align-items: center
+		border: 1px solid transparent
 		width: 40px
 		height: 40px
 		border-radius: 50%
 		background-color: #fff
 		text-decoration: none
-		color: red
 		overflow: hidden
 		z-index: 2
 		transition: color .35s ease
@@ -266,16 +340,29 @@ body.home
 			top: 90%
 			z-index: -1
 		&:hover
-			color: #fff
 			transition: color .35s ease
-			span
-				transform: scale(1.2)
-				transition: transform .35s ease
 			&::before
 				animation: link 0.7s 1
 				top: -10%
 				left: -10%
-
+			svg
+				transform: scale(1.5)
+				transition: transform .25s ease
+	&--default
+		a
+			background-color: $accent
+			&::before
+				background-color: #fff
+			&:hover
+				border-color: $accent
+				svg
+					color: $accent
+		svg
+			color: #fff
+			width: 15px
+			height: 15px
+			transform: scale(1)
+			transition: transform .25s ease
 
 
 
